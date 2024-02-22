@@ -30,7 +30,7 @@ public class ConsumingRestApplication {
 	public CommandLineRunner run(RestTemplate restTemplate) throws Exception {
 		return args -> {
 			Joke joke = restTemplate.getForObject(
-				"http://127.0.0.1:8080/random-joke", Joke.class);
+				"http://localhost:8080/random-joke", Joke.class);
 				log.info(joke.toString());
 		};
 	}
